@@ -1,0 +1,15 @@
+
+
+Frontend
+= Lenguajes = (HTML, CSS, JavaScript)
+= Framework = AngularJS - React - Vue
+
+Backend
+= Lenguajes (PHP, JavaScript, TypeScript, 
+.NET, C#, Python, R, Java, Scala, C, C++, Cobol)
+= Framework = de acuerdo al lenguaje
+
+Bases de datos - Relacionales (SQL) (MySQL, 
+MariaDB, SQL Server, Oracle, PosgreSQL)
+No relacionales (Columnas, Listas, JSON, Clave:valor)
+(Cassandra, MongoDB, Elasticsearch)

@@ -1,0 +1,12 @@
+-----comandos git----
+
+git init
+git add 
+git resset 
+git commit -m
+git push -u origin rama
+git pull origin rama [actualizar repositorio local]
+
+git branch 
+git checkout
+git clone 

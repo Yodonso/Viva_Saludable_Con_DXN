@@ -1,0 +1,20 @@
+SELECT ProductName, SUM(Quantity) AS TotalCantidades
+FROM `Order Details` AS OD
+LEFT JOIN Products AS P ON (OD.ProductID = P.ProductID)
+GROUP BY ProductName;
+
+SELECT ProductName, SUM(Quantity) AS TotalCantidades 
+FROM `Order Details` AS OD 
+LEFT JOIN Products AS P ON (OD.ProductID = P.ProductID) 
+WHERE ProductName like '%ne'
+GROUP BY ProductName;
+
+
+-- like '%ne' Buscar el final
+-- like 'ne%' Buscar el inicio
+-- like '%ne%' Buscar entre o que contenga
+
+
+https://code.google.com/archive/p/northwindextended/downloads
+
+https://www.w3schools.com/sql/sql_select.asp

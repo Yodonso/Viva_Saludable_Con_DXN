@@ -1,0 +1,6 @@
+Instalar las extensiones 
+    Material icons                      --- Iconos a los archivos y carpetas
+    Beautify css/sass/scss/less         --- Identar el codigo
+    Bracket Pair Color DLW              --- Colocar colores apertura y cierre de llaves
+    Comment Divider                     --- Comandos para comentar 
+    indent-rainbow                      --- Barrita para apertura y cierre
