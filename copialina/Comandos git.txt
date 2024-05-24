@@ -3,10 +3,17 @@
 git init
 git add 
 git resset 
-git commit -m
-git push -u origin rama
-git pull origin rama [actualizar repositorio local]
+git commit -m ""
+git push -u origin (rama)
+git pull origin (rama) //actualizar repositorio local
 
-git branch 
-git checkout
-git clone 
+git pull oigin (rama)  //actualiza el repositorio local con lo que esta en la nube
+
+git branch // muestra las ramas 
+git branch -m // cambia el nombre de la rama 
+git checkout -b (nombre rama) // cambia de rama o sino la crea 
+
+git clone (url) // descarga todo el proyecto 
+git clone (rama)(url) // descarga solo la rama 
+
+git status // estado de los archivos 
