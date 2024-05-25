@@ -5,7 +5,6 @@ git add
 git resset 
 git commit -m ""
 git push -u origin (rama)
-git pull origin (rama) //actualizar repositorio local
 
 git pull oigin (rama)  //actualiza el repositorio local con lo que esta en la nube
 

@@ -2,6 +2,7 @@
 /* ---------------------------- metodos generales --------------------------- */
 import express from 'express';
 import morgan from 'morgan';
+import personasRoutes from './routes/personas.routes.js'
 
 /* --------------------------- metodos especificos -------------------------- */
 import {join, dirname} from 'path'
@@ -35,11 +36,10 @@ app.use(express.json());
 /* --------------------------------- routes --------------------------------- */
 
 app.get('/', (req, res)=>{
-    res.json({"message": "Hola Mundo"})
-} )
-app.get('/', (req, res) => {
-    res.json({"message": "Hola Mundo2"})
+    res.render('index')
 });
+
+app.use(personasRoutes);
 
 /* ------------------------------ public files ------------------------------ */
 
