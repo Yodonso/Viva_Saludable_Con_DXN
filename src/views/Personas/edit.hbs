@@ -1,0 +1,54 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-upercase">Editar Productos</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/edit/{{productos.id}}" method="post"> 
+
+                        <div class="input-group mt-2">
+                            <label for="name" class="input-group-text"> Nombre Producto </label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Nombre de producto" value="{{productos.name}}" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="imagen" class="input-group-text"> Cod.Imagen </label>
+                            <input class="form-control" type="text" name="imagen" id="imagen" placeholder="0" value="{{productos.imagen}}" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="precio" class="input-group-text"> Precio </label>
+                            <input class="form-control" type="number" name="precio" id="precio" placeholder="0" value="{{productos.precio}}" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="oferta" class="input-group-text"> Oferta </label>
+                            <input class="form-control" type="number" name="oferta" id="oferta" placeholder="0" value="{{productos.oferta}}" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="stop" class="input-group-text"> Stop </label>
+                            <input class="form-control" type="number" name="stop" id="stop" placeholder="0" value="{{productos.stop}}" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="descripcion" class="input-group-text"> Descripcion de Producto </label>
+                            <input class="form-control" type="text" name="descripcion" id="descripcion" placeholder="Descripcion de el producto" value="{{productos.descripcion}}" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="categoria" class="input-group-text">Categoria </label>
+                            <input class="form-control" type="text" name="categoria" id="categoria" placeholder="categoria de el producto" value="{{productos.categoria}}" autofocus required >
+                        </div>
+
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success"> Actualizar </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,18 +1,14 @@
-CREATE DATABASE Vida_Saludable;
+CREATE DATABASE Prueba01;
 
-USE Vida_Saludable;
+USE Prueba01;
 
-CREATE TABLE Productos(
+CREATE TABLE personas(
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    imagen VARCHAR(50) NOT NULL,
-    precio INT(6) NOT NULL,
-    oferta INT(6) NOT NULL,
-    descripcion VARCHAR(200) NOT NULL,
-    categoria VARCHAR(20) NOT NULL
+    lastname VARCHAR(50) NOT NULL,
+    age INT
 );
 
---------------------
 SELECT * FROM personas;
 
 CREATE USER 'prueba01'@'localhost' IDENTIFIED BY 'prueba01';

@@ -1,0 +1,53 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-upercase">Crear nuevo producto</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/add" method="post">
+
+                        <div class="input-group mt-2">
+                            <label for="name" class="input-group-text"> * Nombre producto </label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Ejemplo: Nombre" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="lastname" class="input-group-text"> * Cod.imagen </label>
+                            <input class="form-control" type="text" name="imagen" id="imagen" placeholder="Ejemplo: # de imagen.ext" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="age" class="input-group-text"> Precio </label>
+                            <input class="form-control" type="number" name="precio" id="precio" placeholder="0" autofocus required >
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="age" class="input-group-text"> Precio </label>
+                            <input class="form-control" type="number" name="oferta" id="oferta" placeholder="0" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="age" class="input-group-text"> Stop </label>
+                            <input class="form-control" type="number" name="stop" id="stop" placeholder="0" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="age" class="input-group-text"> Descripccion </label>
+                            <input class="form-control" type="text" name="descripcion" id="descripcion" placeholder="Describa el producto" autofocus required >
+                        </div>
+
+                        <div class="input-group mt-2">
+                            <label for="age" class="input-group-text"> Categoria </label>
+                            <input class="form-control" type="text" name="categoria" id="categoria" placeholder="a que categoria pertenece" autofocus required >
+                        </div>
+
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success"> Crear </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

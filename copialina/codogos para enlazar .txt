@@ -8,19 +8,21 @@ npm i nodemon -D /-- inicia la extencion para mantener activa la aplicacion
 
 npm run dev /--activa el nodemon
 
+npm i multer // descarga dependencia de imagenes
 
-
-git branch dev
  
 en phpmyadmin
-CREATE USER 'prueba01'@'localhost' IDENTIFIED BY 'prueba01';
-dar permisos 
+npm install -g nodemon
+
 
 https://www.udemy.com/courses/development/web-development/?lang=es&price=price-free&sort=popularity
 ________________________________
 https://www.linkedin.com/learning/
 _________________________
 https://ntfor.com/
+
+https://expressjs.com/en/resources/middleware/multer.html
+https://medium.com/@diego.coder/subida-de-archivos-con-node-js-express-y-multer-55e99219d754
 
 repositorio profesor 
 https://github.com/cdgalvis/ProyectoCompleto

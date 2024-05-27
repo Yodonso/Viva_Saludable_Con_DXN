@@ -7,14 +7,14 @@ import personasRoutes from './routes/personas.routes.js'
 /* --------------------------- metodos especificos -------------------------- */
 import {join, dirname} from 'path'
 import {fileURLToPath} from 'url'
-import {engine} from 'express-handlebars'; /*maneja las plantillas*/
+import {engine} from 'express-handlebars' /*maneja las plantillas*/
 
 
 
 /* ----------------------------- initialization ----------------------------- */
 const app = express();
 /* ---------- evitar conflicto con los nombres se agrega dos guiones bajos (__dirname)-------- */
-const __dirname= dirname(fileURLToPath(import.meta.url)); 
+const __dirname= dirname(fileURLToPath(import.meta.url));
 
 /* --------------------------------- setting -------------------------------- */
 app.set('port', process.env.PORT || 3000);
@@ -34,15 +34,11 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 
 /* --------------------------------- routes --------------------------------- */
-
 app.get('/', (req, res)=>{
     res.render('index')
 });
-
 app.use(personasRoutes);
-
 /* ------------------------------ public files ------------------------------ */
-
 app.use(express.static(join(__dirname, 'public')))
 
 /* ------------------------------- run server ------------------------------- */
