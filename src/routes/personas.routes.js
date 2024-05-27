@@ -73,4 +73,23 @@ router.post('/edit/:id', async (req, res)=>{
      }
 });
 
+router.get('/nosotros', ( req , res)=>{
+  res.render('personas/nosotros')
+});
+
+router.get('/contactenos', ( req , res)=>{
+  res.render('personas/contactenos')
+});
+
+router.get('/membrecia', ( req , res)=>{
+  res.render('personas/membrecia')
+});
+
+router.get('/negocio', ( req , res)=>{
+  res.render('personas/negocio')
+});
+
+router.get('/productos', ( req , res)=>{
+  res.render('personas/productos')
+});
 export default router
