@@ -12,6 +12,22 @@ CREATE TABLE Productos(
     categoria VARCHAR(20) NOT NULL
 );
 
+USE Vida_Saludable;
+
+CREATE TABLE Cliemtes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    telefono INT NOT NULL,
+    email VARCHAR(50) NOT NULL
+    );
+
+USE Vida_Saludable;
+
+CREATE TABLE Categoria(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    categoria VARCHAR(30) NOT NULL,
+     );
 --------------------
 SELECT * FROM Productos;
 

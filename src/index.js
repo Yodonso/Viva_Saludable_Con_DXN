@@ -2,8 +2,8 @@
 /* ---------------------------- metodos generales --------------------------- */
 import express from 'express';
 import morgan from 'morgan';
-import personasRoutes from './routes/personas.routes.js'
-
+import personasRoutes from './routes/personas.routes.js';
+import clintesRoutes from './routes/clientes.routes.js'; 
 /* --------------------------- metodos especificos -------------------------- */
 import {join, dirname} from 'path'
 import {fileURLToPath} from 'url'
@@ -38,6 +38,7 @@ app.get('/', (req, res)=>{
     res.render('index')
 });
 app.use(personasRoutes);
+app.use(clintesRoutes) 
 /* ------------------------------ public files ------------------------------ */
 app.use(express.static(join(__dirname, 'public')))
 
