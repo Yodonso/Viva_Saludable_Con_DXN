@@ -2,7 +2,7 @@
 /* ---------------------------- metodos generales --------------------------- */
 import express from 'express';
 import morgan from 'morgan';
-import personasRoutes from './routes/personas.routes.js';
+import personasRoutes from './routes/productos.routes.js';
 import clintesRoutes from './routes/clientes.routes.js'; 
 /* --------------------------- metodos especificos -------------------------- */
 import {join, dirname} from 'path'

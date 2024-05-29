@@ -1,15 +1,17 @@
 --crea la tabla 
+CREATE DATABASE Vida_Saludable;
+
 USE Vida_Saludable;
 
 CREATE TABLE Productos(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    imagen VARCHAR(50) NOT NULL,
+    name VARCHAR(50) NOT NULL,  
     precio INT(6) NOT NULL,
     oferta INT(6) NOT NULL,
     stop INT(6) NOT NULL,
     descripcion VARCHAR(200) NOT NULL,
-    categoria VARCHAR(20) NOT NULL
+    categoria VARCHAR(20) NOT NULL,
+    imagen VARCHAR(50) NOT NULL
 );
 
 USE Vida_Saludable;

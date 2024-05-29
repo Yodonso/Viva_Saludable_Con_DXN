@@ -5,7 +5,7 @@ const router= Router();
 
 /* --------------------- crea nuevo items para guardar ------------------------- */
 router.get('/add', ( req , res)=>{
-  res.render('personas/add')
+  res.render('productos/add')
 });
 
 router.post('/add', async (req, res)=>{
@@ -25,7 +25,7 @@ router.post('/add', async (req, res)=>{
 router.get('/list', async(req, res) =>{
     try{
         const[result]= await pool.query('SELECT * FROM productos');
-        res.render('personas/list', {productos: result})
+        res.render('productos/list', {productos: result})
         
     }catch (error) {
         res.status(500).json({message: error.message});
@@ -51,7 +51,7 @@ router.get('/edit/:id', async (req, res)=>{
       const {id} = req.params
       const [productos] = await pool.query('SELECT * FROM productos WHERE id = ?', [id]);
       const productoEdit = productos[0]
-      res.render('personas/edit', { productos: productoEdit })
+      res.render('productos/edit', { productos: productoEdit })
   } catch (error) {
       res.status(500).json({ message: error.message });
   }
@@ -74,22 +74,22 @@ router.post('/edit/:id', async (req, res)=>{
 });
 
 router.get('/nosotros', ( req , res)=>{
-  res.render('personas/nosotros')
+  res.render('productos/nosotros')
 });
 
 router.get('/contactenos', ( req , res)=>{
-  res.render('personas/contactenos')
+  res.render('productos/contactenos')
 });
 
 router.get('/membrecia', ( req , res)=>{
-  res.render('personas/membrecia')
+  res.render('productos/membrecia')
 });
 
 router.get('/negocio', ( req , res)=>{
-  res.render('personas/negocio')
+  res.render('productos/negocio')
 });
 
 router.get('/productos', ( req , res)=>{
-  res.render('personas/productos')
+  res.render('productos/productos')
 });
 export default router
