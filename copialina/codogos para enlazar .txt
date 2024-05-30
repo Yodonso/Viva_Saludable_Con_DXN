@@ -3,7 +3,7 @@ Set-ExecutionPolicy Unrestricted /--quita la configuracion de seuridad
 npm init --y /--crea el arcivo de inicio de proyecto
 
 npm i // inicia el node modules 
-npm i express express-handlebars morgan mysql2 /--inicia extensiones 
+npm i express express-handlebars morgan (mysql2) o (pg) /--inicia extensiones 
 npm i nodemon -D /-- inicia la extencion para mantener activa la aplicacion 
 
 npm run dev /--activa el nodemon

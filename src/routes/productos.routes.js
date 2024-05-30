@@ -89,7 +89,15 @@ router.get('/negocio', ( req , res)=>{
   res.render('productos/negocio')
 });
 
-router.get('/productos', ( req , res)=>{
-  res.render('productos/productos')
+
+router.get('/producto', async(req, res) =>{
+  try{
+      const[result]= await pool.query('SELECT * FROM productos');
+      res.render('productos/producto', {productos: result})
+      
+  }catch (error) {
+      res.status(500).json({message: error.message});
+  }
 });
+
 export default router
