@@ -2,7 +2,7 @@
     <div class="row mt-5">
         <h3 class="text-center text-uppercase p-2"> Crear nuevo cliente</h3>
 
-        {{#if cliemtes}}
+        {{#if clientes}}
 
             <table class="table text-center">
                 <thead>
@@ -15,7 +15,7 @@
                 </thead>
                 <tbody>
 
-                    {{#each cliemtes}}
+                    {{#each clientes}}
                         <tr>
                             <td> {{nombre}} </td>
                             <td> {{apellido}} </td>
@@ -26,7 +26,7 @@
                                     <a href="/editCliente/{{id}}" class="btn btn-warning p-2">
                                         <i class="fa-solid fa-pencil"></i>
                                     </a>
-                                    <a href="/delete/{{id}}" class="btn btn-danger p-2">
+                                    <a href="/deleteCliente/{{id}}" class="btn btn-danger p-2">
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </div>

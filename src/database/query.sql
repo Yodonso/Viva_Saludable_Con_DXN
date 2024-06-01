@@ -16,11 +16,11 @@ CREATE TABLE Productos(
 
 USE Vida_Saludable;
 
-CREATE TABLE Cliemtes(
+CREATE TABLE Clientes(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
-    telefono INT NOT NULL,
+    telefono BIGINT NOT NULL,
     email VARCHAR(50) NOT NULL
     );
 
