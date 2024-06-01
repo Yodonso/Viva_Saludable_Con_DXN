@@ -1,50 +1,30 @@
 
 <div class="container">
-    <div class="row mt-3 text-center ">
-        <div class="col-12 m-1">
-            <div class="card">
-                <h4 class="card-header">Albun de Productos</h4>
-                  
-                    {{#if productos}}                
-                      {{#each productos }}
-                         <div class="card-body bg-success p-2 text-dark bg-opacity-10">
-                            <div class="container">
-                                <div class="row mt-3 text-center ">
-                                    <div class="col-5 m-1">
-                                        <h5> {{name}} </h5>
-                                          <p>
-                                            <img src="/uploads/{{imagen}}" class="card-img-top mx-auto m-2" style="width: 150px; height: 150px;display:block;">
-                                         </p>
-                                          <p>*************************************************</p>   
-                                        <p> Precio: {{precio}} </p>
-                                           <p>Oferta: {{oferta}} </p> 
-                                       <h5>Para que nos sirve:</h5>                           
-                                       <p> {{descripcion}} </p>
-                                       <h6>Enfoque: {{categoria}} </h6>    
-                                     <p>*************************************************</p>             
-                                   </div>
-                              </div>
-                             </div>
-                          </div>
-                      {{/each}}
-               
-                      {{else}}
-
-                        <div class="card text-center mx-auto">
-                          <div class="card-header">
-                             <h3> Debes crear Productos</h3>
-                         </div>
-                       <div class="card-body">
-                         <p>Presiona este boton para que puedas crear un producto en la aplicacion</p>
-                         <a href="/add" class="btn btn-primary"> Ir a crear</a>
-                       </div>
-                 </div>
-
-                {{/if}}
-           </div>
-        </div>
-       </div>
+  <div class="row mt-5 text-center">
+    <div class="col-10 m-1">
+      <div class="card">
+        <h3 class="card-header">Album de productos</h3>
+      </div>
     </div>
-    
-    
+      {{#if productos}}                
+        {{#each productos }}
+    <div class="col-5 m-1">
+      <div class="card">                
+          <h5 class="card-header"> {{name}} </h5>
+          <p>
+            <img src="/uploads/{{imagen}}" class="card-img-top mx-auto m-2" style="width: 150px; height: 150px;display:block;">
+          </p>
+          <p>*************************************************</p>   
+          <p> Precio: $ {{precio}} </p>
+          <p>Oferta: $ {{oferta}} </p> 
+          <h5>Para que nos sirve:</h5>                           
+          <p> {{descripcion}} </p>
+          <h5>Enfoque: {{categoria}} </h5>    
+          <p>*************************************************</p>               
+      </div>
+    </div>
+        {{/each}}               
+            {{else}}
+      {{/if}}
+  </div>
 </div>
