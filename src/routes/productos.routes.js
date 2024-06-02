@@ -1,19 +1,41 @@
 import {Router} from 'express'
 import pool from '../database.js'
+import multer from 'multer'
+import path from 'path'
 
 const router= Router();
+/* ----------------------- crea la rura para guardar la imagen ---------------------- */
+const storage = multer.diskStorage({
+  destination: 'src/public/uploads/',
+  filename: (req, file, cb) => {                          //Mayor o = 0 y Menor que 1
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      const ext = path.extname(file.originalname)
+      cb(null, file.fieldname + '-' + uniqueSuffix + ext)
+  }
+})
+
+const upload = multer({storage});
 
 /* --------------------- crea nuevo items para guardar ------------------------- */
 router.get('/add', ( req , res)=>{
   res.render('productos/add')
 });
 
-router.post('/add', async (req, res)=>{
+router.post('/add', upload.single('file'), async (req, res)=>{
   try {
-      const { name, imagen, precio, oferta, stop, descripcion, categoria} = req.body
-      const newPersona = {
-          name, imagen, precio, oferta, stop, descripcion, categoria
-      }
+    const { name, precio, oferta, stop, descripcion, categoria, imagen } = req.body
+    let newPersona = {}
+    if(req.file){
+        const file = req.file
+        const imagen_original = file.originalname
+        const imagen = file.filename
+        newPersona = { name, precio, oferta, stop, descripcion, categoria, imagen }
+    }else{
+        newPersona = { name, precio, oferta, stop, descripcion, categoria }
+    }
+
+
+
       await pool.query('INSERT INTO productos SET ?', [newPersona]);
       res.redirect('/list');
   } catch (error) {
@@ -58,11 +80,19 @@ router.get('/edit/:id', async (req, res)=>{
 });
 
 /* ---------------------------- edita los valores --------------------------- */
-router.post('/edit/:id', async (req, res)=>{
+router.post('/edit/:id', upload.single('file'), async (req, res)=>{
   try {
-      const {id} = req.params;
-      const { name, imagen, precio, oferta, stop, descripcion, categoria }  = req.body;
-      const editProducto = { name, imagen, precio, oferta, stop, descripcion, categoria };
+    const {id} = req.params
+    const {name, precio, oferta, stop, descripcion, categoria, imagen}  = req.body
+    let editProducto = {}
+      if(req.file){
+          const file = req.file
+          const imagen_original = file.originalname
+          const imagen = file.filename
+          editProducto = { name, precio, oferta, stop, descripcion, categoria, imagen}
+      }else{
+          editProducto = {name, precio, oferta, stop, descripcion, categoria}
+      }
 
       await pool.query( 'UPDATE productos SET ? WHERE id = ?', [editProducto, id]);
 

@@ -6,16 +6,11 @@
                     <h3 class="text-upercase">Editar Productos</h3>
                 </div>
                 <div class="card-body">
-                    <form action="/edit/{{productos.id}}" method="post"> 
+                    <form action="/edit/{{productos.id}}" method="post" enctype="multipart/form-data"> 
 
                         <div class="input-group mt-2">
                             <label for="name" class="input-group-text"> Nombre Producto </label>
                             <input class="form-control" type="text" name="name" id="name" placeholder="Nombre de producto" value="{{productos.name}}" autofocus required >
-                        </div>
-
-                        <div class="input-group mt-2">
-                            <label for="imagen" class="input-group-text"> Cod.Imagen </label>
-                            <input class="form-control" type="text" name="imagen" id="imagen" placeholder="0" value="{{productos.imagen}}" autofocus required >
                         </div>
 
                         <div class="input-group mt-2">
@@ -43,6 +38,16 @@
                             <label for="categoria" class="input-group-text">Categoria </label>
                             <input class="form-control" type="text" name="categoria" id="categoria" placeholder="categoria de el producto" value="{{productos.categoria}}" autofocus required >
                         </div>
+
+                        <div class="input-group mt-2">
+                            <input class="form-control" type="file" name="file" id="file">
+                        </div>
+
+                          {{#if productos.imagen}}
+                        <div class="input-group mt-2">
+                            <img src="/uploads/{{productos.imagen}}" class="card-img-top mx-auto m-2 rounded-circle" style="width: 150px; height: 150px;display:block;">
+                        </div>
+                         {{/if}}
 
                         <div class="form-group mt-4 d-grid gap-2">
                             <button class="btn btn-success"> Actualizar </button>
